@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Apéro PHP | GravCMS</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,115 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1>GravCMS</h1>
+					<h3>Pourquoi il est grave bien ?</h3>
+					<p>
+						<small><a href="https://getgrav.org">https://getgrav.org</a></small>
+					</p>
+				</section>
+				<section>
+					<h1><small>Romain Moro</small></h1>
+					<p>
+						Développeur PHP/Drupal<br />
+						<img src="img/twitter.png" alt="twitter" width="50px" height="50px" style="position: absolute; border: none; box-shadow: none; margin-left: -50px; margin-top: 5px"> @c4ilus<br />
+						<img src="img/drupal.png" alt="drupal" width="35px" height="35px" style="position: absolute; border: none; box-shadow: none; margin-left: -50px; margin-top: 10px"> https://www.drupal.org/user/2944853
+					</p>
+					<p>
+						<img src="img/makina.png" alt="Makina Corpus" width="200px" style="border: none; box-shadow: none;">
+					</p>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>GravCMS</small></h1>
+					<ul>
+						<li class="fragment">CMS <strong>PHP</strong> crée en 2014</li>
+						<li class="fragment">Licence MIT</li>
+						<li class="fragment">> 6700 stars</li>
+						<li class="fragment">> 3500 commits</li>
+						<li class="fragment">Open source</li>
+					</ul>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>GravCMS</small></h1>
+					<p>Utilisation de composants <strong>Symfony</strong></p>
+					<ul>
+						<li class="fragment">Console</li>
+						<li class="fragment">EventDispacher</li>
+						<li class="fragment">VarDumper</li>
+					</ul>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>GravCMS</small></h1>
+					<ul>
+						<li class="fragment">Templating <strong>Twig</strong></li>
+						<li class="fragment"><strong>Flat-files</strong> Architecture</li>
+						<li class="fragment">Contenu en <strong>markdown</strong></li>
+						<li class="fragment">Configuration <strong>yml</strong></li>
+					</ul>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>Communauté</small></h1>
+					<ul>
+						<li class="fragment">Modules / Themes
+							<ul>
+								<li><a href="https://getgrav.org/downloads/plugins">https://getgrav.org/downloads/plugins</a></li>
+								<li><a href="https://getgrav.org/downloads/themes">https://getgrav.org/downloads/themes</a></li>
+								<li><a href="https://getgrav.org/downloads/skeletons">https://getgrav.org/downloads/skeletons</a></li>
+							</ul>
+						</li>
+						<li class="fragment">Communauté active</li>
+						<li class="fragment">Code très propre</li>
+						<li class="fragment">Bonne documentation</li>
+					</ul>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>Installation</small></h1>
+					<ol>
+						<li class="fragment">Téléchargement de l'archive</li>
+						<li class="fragment">Via composer<br />
+							<code><small>composer create-project getgrav/grav ~/Workspace/gravcms.local</small></code>
+						</li>
+						<li class="fragment">Via Git<br />
+							<code><small>
+							cd ~/Workspace/gravcms.local<br />
+							git clone -b master https://github.com/getgrav/grav.git<br />
+							composer install --no-dev -o<br />
+							cd grav && bin/grav install
+							</small></code>
+						</li>
+					</ol>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>Installation</small></h1>
+					<img src="img/install.png" alt="Grav CMS" width="70%">
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>Fonctionnalités</small></h1>
+					<ul>
+						<li class="fragment">Système de cache intégré</li>
+						<li class="fragment">CLI Tool</li>
+						<li class="fragment">SEO-(presque)Friendly</li>
+						<li class="fragment">Système de cache par défaut</li>
+						<li class="fragment">Système de backup/restore simple</li>
+						<li class="fragment">Multi-site / Multi-langue</li>
+						<li class="fragment">Debug bar</li>
+					</ul>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<h1><small>Ressources</small></h1>
+					<small>
+					<ul>
+						<li class="fragment"><strong>GravCMS</strong>: <a href="https://getgrav.org/">https://getgrav.org/</a></li>
+						<li class="fragment"><strong>GitHub</strong>: <a href="https://github.com/getgrav/grav">https://github.com/getgrav/grav</a></li>
+						<li class="fragment"><strong>Packagist</strong>: <a href="https://packagist.org/packages/getgrav/grav">https://packagist.org/packages/getgrav/grav</a></li>
+						<li class="fragment"><strong>Docker</strong>: <a href="https://hub.docker.com/r/garywiz/docker-grav/">https://hub.docker.com/r/garywiz/docker-grav/</a></li>
+						<li class="fragment"><strong>Présentation vidéo</strong>: <a href="https://youtu.be/YCBE3N3Ny_o">https://youtu.be/YCBE3N3Ny_o</a></li>
+					</ul>
+					</small>
+				</section>
+				<section data-background="img/grav.png" data-background-size="200px">
+					<img src="img/award.png" alt="Grav Award" width="80%">
+				</section>
 			</div>
 		</div>
 
