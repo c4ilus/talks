@@ -24,7 +24,10 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background="" data-background-size=""></section>
+				<section data-background="img/behat.png" data-background-size="2300px">
+					<h1>Drupal & Symfony</h1>
+					<h3>Des tests fonctionnels avec Behat !</h3>
+				</section>
 				<section>
 					<h1><small>Romain Moro</small></h1>
 					<p>
@@ -36,7 +39,194 @@
 						<img src="img/makina.png" alt="Makina Corpus" width="200px" style="border: none; box-shadow: none;">
 					</p>
 				</section>
-				<section data-background="" data-background-size=""></section>
+				<section>
+					<h1><small>Pourquoi les tests ?</small></h1>
+					<img src="img/nobody.jpg" alt="Ain't nobody got time for that">
+				</section>
+				<section>
+					<h1><small>Pourquoi les tests ?</small></h1>
+					<ul>
+						<li>Application robuste</li>
+						<li>Satisfaction de l'équipe</li>
+						<li>Satisfaction du client</li>
+					</ul>
+				</section>
+				<section>
+					<h1><small>Pourquoi les tests ?</small></h1>
+					<h3><small>Tests Unitaires (au niveau du code) - Scénarios simples</small></h3>
+					<p><small>Test sur les fonctions/méthodes (entrée => sortie)</small></p>
+					<p><small><strong>PHPUnit, Lime, Unittest, Cunit, Cppunit ...</strong></small></p>
+					<h3><small>Tests Fonctionnels (utilisateur final) - Scénarios complexes</small></h3>
+				</section>
+				<section>
+					<h1><small>Pourquoi les tests ?</small></h1>
+					<h3><small>Définition et principes d'un test fonctionnel.</small></h3>
+					<p><small>Lorsque nous parlons de « tests fonctionnels », <br />entendons « tester l’interface de l’application ».</small></p>
+					<p><small><strong>Mise en cache, Affichage d'un élément (h1, bloc, menu ...), Connexion ...</strong></small></p>
+					<p><small>Nombreux cas de figure / jeux de tests</small></p>
+					<p><small>Automatiser des tests qui pourraient être faits par un humain.</small></p>
+				</section>
+				<section>
+					<h1><small>Pourquoi les tests ?</small></h1>
+					<img src="img/behat-logo.png" height="100px" alt="Behat" style="border:none;box-shadow: none">
+					<img src="img/cocumber.png" height="100px" alt="Cocumber" style="border:none;box-shadow: none">
+					<img src="img/robot-logo.png" height="60px" alt="Robot framework" style="border:none;box-shadow: none"><br />
+					<img src="img/983927.png" height="100px" alt="Selenium" style="border:none;box-shadow: none">
+				</section>
+				<section>
+					<h1><small>Pourquoi les tests ?</small></h1>
+					<h3><small>La méthodologie du "Behavior Driven Development"</small></h3>
+					<small>
+						<ul>
+							<li>Méthode Agile</li>
+							<li>Collaboration entre les acteurs d'un projet logiciel</li>
+							<li>Mise en avant des interactions et du langage naturel dans le processus de développement</li>
+							<li>Pourquoi le code doit-être crée ?</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>Pourquoi les tests ?</small></h1>
+					<h3><small>La méthodologie du "Behavior Driven Development"</small></h3>
+					<small>
+						<ul>
+							<li>Utilisation d'exemples pour décrire la demande</li>
+							<li>Mise en avant des interactions et du langage naturel dans le processus de développement</li>
+							<li>Différencier les résultats attendus de l'exécution d'un code en fonction d'effets secondaires d'autres éléments de ce code (effets de bord)</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Présentation</small></h3>
+					<small>
+						<ul>
+							<li>Framework PHP de BDD</li>
+							<li>Écrire des tests dans un langage compréhensible</li>
+							<li>Open Source</li>
+							<li>First release : Septembre 2010</li>
+							<li>Version 3.0.12</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Présentation</small></h3>
+					<small>
+						<strong>Gherkin</strong><br />
+						<ul>
+							<li>Ecrire des instructions dans un langage humain</li>
+							<li>1 instruction => 1 fonction PHP.</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Présentation</small></h3>
+					<small>
+						<strong>Mink</strong><br />
+						<ul>
+							<li>Connecter Behat avec des outils d'émulation de navigateurs.</li>
+							<li>Simuler les interaction avec le navigateur (Selenium)</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<img src="img/how-it-work.jpg" alt="How it work" style="border:none;box-shadow: none">
+					<small><em>Source : http://blog.eleven-labs.com/fr/behat-structurez-vos-tests-fonctionnels/</em></small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Installation - Prérequis</small></h3>
+					<strong><small>Installer</small></strong>
+					<small>
+						<ul>
+							<li><strong>Composer</strong> : https://getcomposer.org/</li>
+							<li><strong>php-curl</strong> : <code>sudo apt-get install php5-curl / php7.0-curl</code></li>
+							<li><strong>Selenium</strong> : http://docs.seleniumhq.org/download/</li>
+							<li><strong>Google Chrome driver</strong> :  <code>sudo apt-get install chromium-chromedriver</code></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Installation - Prérequis</small></h3>
+					<small><strong>Lancer le server selenium (en précisant d'utiliser le chrome driver) ...</strong></small>
+					<code><small>java -jar selenium-server-standalone-2.49.1.jar -Dwebdriver.chrome.driver=/usr/lib/chromium-browser/chromedriver</small></code>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Installation</small></h3>
+					<small><strong>Créer le dossier (hors du www)</strong></small><br />
+					<small><code>mkdir tests && cd tests</code></small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Installation</small></h3>
+					<small><strong>Installer behat, symfony2-extension et drupal-extension avec composer</strong></small>
+					<small>
+						<code>composer require behat/behat</code><br />
+						<code>composer require behat/mink</code><br />
+						<code>composer require behat/mink-selenium2-driver</code><br />
+						<code>composer require behat/mink-extension</code><br />
+						<code>composer require symfony2-extension</code><br />
+						<code>composer require drupal/drupal-extension:~3.0</code>
+					</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Initialisation</small></h3>
+					<small><code>vendor/bin/behat --init</code></small>
+					<small>
+						<ul>
+							<li>création du dossier features (contenant nos futur scénarios)</li>
+							<li>création du dossier features/bootstrap  permettant de créer nos propres vocabulaires</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Configuration (symfony) - /tests/behat.yml</small></h3>
+					<img src="img/behat-config-drupal7.png" width="600px" alt="Configuration de behat pour Drupal 7" style="border:none;box-shadow: none">
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Configuration (symfony) - /tests/behat.yml</small></h3>
+					<img src="img/behat-config-symfony.png" width="600px" alt="Configuration de behat pour Symfony" style="border:none;box-shadow: none">
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Création de notre première feature<symfony></symfony></small></h3>
+					<small>
+						<code>cd features/</code><br />
+						<code>first.feature</code>
+					</small><br />
+					<img src="img/behat-feature.png" width="600px" alt="Feature behat" style="border:none;box-shadow: none">
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Exécution<symfony></symfony></small></h3>
+					<small><code>vendor/bin/behat/features/first.feature</code></small><br />
+					<small>Et on croise les doits ....</small>
+				</section>
+				<section>
+					<h1><small>L'outil Behat</small></h1>
+					<h3><small>Résultat<symfony></symfony></small></h3>
+					<img src="img/behat-resultat.png" width="80%" alt="Résultat" style="border:none;box-shadow: none">
+				</section>
+				<section>
+					<h1><small>Ressources</small></h1>
+					<small>
+						<ul>
+							<li><strong>Behat</strong>: <a href="http://docs.behat.org/en/v3.0/" target="_blank">http://docs.behat.org/en/v3.0/</a></li>
+							<li><strong>Behat (packagist)</strong>: <a href="https://packagist.org/packages/behat/behat" target="_blank">https://packagist.org/packages/behat/behat</a></li>
+							<li><strong>Drupal extension</strong>: <a href="https://packagist.org/packages/drupal/drupal-extension" target="_blank">https://packagist.org/packages/drupal/drupal-extension</a></li>
+							<li><strong>Behat et symfony 2 [FR]</strong>: <a href="http://blog.eleven-labs.com/fr/behat-structurez-vos-tests-fonctionnels/" target="_blank">http://blog.eleven-labs.com/fr/behat-structurez-vos-tests-fonctionnels/</a></li>
+							<li><strong>Behat et Drupal [EN]</strong>: <a href="https://www.phparch.com/2016/08/testing-your-drupal-site-with-behat/" target="_blank">https://www.phparch.com/2016/08/testing-your-drupal-site-with-behat/</a></li>
+						</ul>
+					</small>
+				</section>
 			</div>
 		</div>
 
