@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Tests fonctionnels avec Behat ! | Drink-n'-Drupal Toulouse</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Symfony 3</h1>
+					<h3>Les bundles indispensables !</h3>
+				</section>
+				<section>
+					<h1><small>Romain Moro</small></h1>
+					<p>
+						Développeur PHP/Drupal<br />
+						<img src="img/twitter.png" alt="twitter" width="50px" height="50px" style="position: absolute; border: none; box-shadow: none; margin-left: -50px; margin-top: 5px"> @c4ilus<br />
+						<img src="img/drupal.png" alt="drupal" width="35px" height="35px" style="position: absolute; border: none; box-shadow: none; margin-left: -50px; margin-top: 10px"> https://www.drupal.org/u/c4ilus
+					</p>
+					<p>
+						<img src="img/makina.png" alt="Makina Corpus" width="200px" style="border: none; box-shadow: none;">
+					</p>
+				</section>
+				<section>
+					<h1><small>Qu'est-ce qu'un <strong>Bundle</strong> ?</small></h1>
+				</section>
+				<section>
+					<h1><small>Où ? Comment ?</small></h1>
+					<small>
+						<ul>
+							<li>KnpBundles</li>
+							<li>Packagist</li>
+							<li><code>composer require friendsofsymfony/user-bundle "~2.0"</code></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>FOSUserBundle</small></h1>
+					<small>
+						<ul>
+							<li>Utilisateurs / Rôles / Permissions</li>
+							<li>Doctrine, Propel</li>
+							<li><a href="https://github.com/FriendsOfSymfony/FOSUserBundle" target="_blank">https://github.com/FriendsOfSymfony/FOSUserBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>FOSRESTBundle</small></h1>
+					<small>
+						<ul>
+							<li>API RESTful</li>
+							<li>Désérialisation JSON/XML -> Objet </li>
+							<li>Annotations pour les contrôleur</li>
+							<li><a href="https://github.com/FriendsOfSymfony/FOSRestBundle" target="_blank">https://github.com/FriendsOfSymfony/FOSRestBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>EasyAdminBundle</small></h1>
+					<small>
+						<ul>
+							<li>Interface d'asministration</li>
+							<li>Léger, configurable</li>
+							<li><a href="https://github.com/javiereguiluz/EasyAdminBundle" target="_blank">https://github.com/javiereguiluz/EasyAdminBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>DoctrineMigrationsBundle</small></h1>
+					<small>
+						<ul>
+							<li>Librairie Doctrine2 Migrations</li>
+							<li>Versionning du schéma de la BDD</li>
+							<li><a href="https://github.com/doctrine/DoctrineMigrationsBundle" target="_blank">https://github.com/doctrine/DoctrineMigrationsBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>FOSElasticaBundle</small></h1>
+					<small>
+						<ul>
+							<li>Elasticsearch / Elastica</li>
+							<li><a href="https://github.com/FriendsOfSymfony/FOSElasticaBundle" target="_blank">https://github.com/FriendsOfSymfony/FOSElasticaBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>NelmioApiDocBundle</small></h1>
+					<small>
+						<ul>
+							<li>Documentation pour un API RestFul</li>
+							<li>Swagger UI</li>
+							<li>Utilise les annotations</li>
+							<li><a href="https://github.com/nelmio/NelmioApiDocBundle" target="_blank">https://github.com/nelmio/NelmioApiDocBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>WebProfilerExtraBundle</small></h1>
+					<small>
+						<ul>
+							<li>Supplément d'informations</li>
+							<li>Routing, container, assetic, twig<</li>
+							<li><a href="https://github.com/Elao/WebProfilerExtraBundle" target="_blank">https://github.com/Elao/WebProfilerExtraBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>SonataSeoBundle</small></h1>
+					<small>
+						<ul>
+							<li><strong>seo</strong>, <strong>Seo</strong>, <strong>SEO</strong> !!!!!</li>
+							<li>Metadata, Attribus, URL Canoniques ...</li>
+							<li><a href="https://github.com/sonata-project/SonataSeoBundle" target="_blank">https://github.com/sonata-project/SonataSeoBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>FMElfinderBundle</small></h1>
+					<small>
+						<ul>
+							<li>Gestion de médias</li>
+							<li>TinyMCE, Ckeditor</li>
+							<li><a href="https://github.com/helios-ag/FMElfinderBundle" target="_blank">https://github.com/helios-ag/FMElfinderBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>KnpMenuBundle</small></h1>
+					<small>
+						<ul>
+							<li>Menus riches</li>
+							<li>Construction Orientée Objects</li>
+							<li><a href="https://github.com/helios-ag/FMElfinderBundle" target="_blank">https://github.com/helios-ag/FMElfinderBundle</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>Ressources</small></h1>
+					<small>
+						<ul>
+							<li><strong>KnpBundles</strong>: <a href="http://knpbundles.com/" target="_blank">http://knpbundles.com/</a></li>
+							<li><strong>Packagist</strong>: <a href="https://packagist.org/" target="_blank">https://packagist.org/</a></li>
+							<li><strong>FriendsOfSymfony</strong>: <a href="https://github.com/FriendsOfSymfony" target="_blank">https://github.com/FriendsOfSymfony</a></li>
+							<li><strong>Sonata Project</strong>: <a href="https://github.com/sonata-project" target="_blank">https://github.com/sonata-project</a></li>
+						</ul>
+					</small>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
