@@ -3,6 +3,7 @@
 ## Apéro PHP Toulouse
 
 * GravCMS | Le Seventies, le 16 décembre 2016: [présentation](https://c4ilus.github.io/talks/GravCMS/)
+* Symfony 3, les bundles indispensables | La Cantine, le 5 Juillet 2017: [présentation](https://c4ilus.github.io/talks/symfony3-bundles-indispensables/)
 
 ## Drink N' Drupal Toulouse
 
