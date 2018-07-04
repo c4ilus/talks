@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Symfony 4 & GraphQL ! | Apéro PHP Toulouse</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Symfony 4 & GraphQL</h1>
+					<h3><small>Not yet another POC !</small></h3>
+					<p style="text-align: center; width: 100%">
+						<img src="img/symfony.png" alt="" style="border: none; box-shadow: none; width: 150px">
+						<img src="img/graph.png" alt="" style="border: none; box-shadow: none; width: 150px">
+					</p>
+				</section>
+				<section>
+					<h1><small>Romain Moro</small></h1>
+					<p>
+						Développeur PHP/Drupal<br />
+						<img src="img/twitter.png" alt="twitter" width="50px" height="50px" style="position: absolute; border: none; box-shadow: none; margin-left: -50px; margin-top: 5px"> @c4ilus<br />
+						<img src="img/drupal.png" alt="drupal" width="35px" height="35px" style="position: absolute; border: none; box-shadow: none; margin-left: -50px; margin-top: 10px"> https://www.drupal.org/u/c4ilus
+					</p>
+					<p>
+						<img src="img/makina.png" alt="Makina Corpus" width="200px" style="border: none; box-shadow: none;">
+					</p>
+				</section>
+				<section>
+					<h1><small>Sommaire</small></h1>
+					<ul>
+						<li>Contexte</li>
+						<li>Qu'est-ce que GraphQL ?</li>
+						<li>Concepts importants</li>
+						<li>Et dans symfony ?</li>
+						<li>Démo</li>
+						<li>Ressources</li>
+					</ul>
+				</section>
+				<section>
+					<h1><small>Pourquoi ?</small></h1>
+					<small>
+						<ul>
+							<li class="fragment">Originellement projet sur une autre technologie</li>
+							<li class="fragment">Intérêt grandissant pour Symfony</li>
+							<li class="fragment">Pourquoi pas essayer ?</li>
+							<li class="fragment">Proof of concept !</li>
+							<li class="fragment">Compétence supplémentaire</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h4>Monsieur Monsieur ...</h4>
+					<h1><small>c'est quoi GraphQL ?</small></h1>
+					<small>
+						<ul>
+							<li>Language de <strong>requêtage</strong></li>
+							<li>Créé par Facebook en 2012, publié en 2015</li>
+							<li>Décrit une donnée et explique comment les récupérer</li>
+							<li>Interrgoer n'importe quelle base de donnée ou API</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>GraphQL</small></h1>
+					<small>
+						<ul>
+							<li>Un seul <strong>endpoint</strong></li>
+							<li>Selection précise des données à récupérer</li>
+							<li>Choix de la structure des données<br /><br />
+								<p style="text-align: center; width: 100%">
+									<img src="img/requete.png" alt="">
+								</p>
+							</li>
+							<li>Communication en <strong>JSON</strong></li>
+							<li>Requetes en POST</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>GraphQL</small></h1>
+					<small>
+						<ul>
+							<li><strong>Graphiql</strong>
+								<ul>
+									<li>Interface / Explorer</li>
+									<li>Génére une documentation</li>
+									<li>Test de requêtes</li>
+									<li>A découvrir dans la démo !</li>
+								</ul>
+							</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small>Les concepts importants</small></h1>
+					<h4 class="fragment"><strong>Type</strong></h4>
+					<small class="fragment">
+						<ul>
+							<li>Objets</li>
+							<li>Requêtes : <strong>Query</strong>, <strong>Mutation (create, update, delete)</strong></li>
+						</ul>
+					</small><br /><br />
+					<h4 class="fragment"><strong>Schéma</strong> (Quoi, comment)</h4>
+					<h4 class="fragment"><strong>Résolver</strong> (Où)</h4>
+				</section>
+				<section>
+					<h1><small>ET dans Symfony alors ?</small></h1>
+					<h4><strong>overblog/GraphQLBundle</strong><br />vs<br /><strong>Youshido/GraphQLBundle</strong></h4>
+					<br>
+					<small>
+						<ul class="fragment">
+							<li>Pour overblog :
+								<ul>
+									<li>Plus de contributeurs (35 > 22)</li>
+									<li>Stars (322 > 269)</li>
+									<li>Plus d'activité</li>
+								</ul>
+							</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1><small><strike>Enfin</strike> Au travail !</small></h1>
+					<p><small>Installation de symfony (4.1)</small><br /><code><small>composer create-project symfony/website-skeleton .</small></code></p>
+					<p><small>Accès à la BDD : fichier .env</small><br /><code><small>DATABASE_URL=mysql://user:pass;1234@127.0.0.1:3306/api</small></code></p>
+					<p><small>Créer des entitées</small><br /><code><small>php bin/console make:entity</small></code></p>
+				</section>
+				<section>
+					<h1><small>Au travail !</small></h1>
+					<p><small>Préparer la requette SQL</small><br /><code><small>php bin/console make:migration</small></code></p>
+					<p><small>Créer la base de données</small><br /><code><small>php bin/console doctrine:migrations:migrate</small></code></p>
+				</section>
+				<section>
+					<h1><small>Au travail !</small></h1>
+					<p><small>Installation du bundle pour GraphQL</small><br /><code><small>composer require overblog/graphql-bundle</small></code></p>
+					<p><small>Installation du bundle pour l'explorer</small><br /><code><small>composer require --dev overblog/graphiql-bundle</small></code></p>
+				</section>
+				<section>
+					<h1><small>Explorons le code *</small></h1>
+					<img src="img/lampe.png" alt="" width="400px" style="border: none; box-shadow: none; background: transparent">
+					<p><small style="font-size: 14px"><em>* l'exporation du code s'est effectué en diret sur IDE et n'est donc pas disponible en ligne.<br />La maison s'excuse pour ce désagrément !</em></small><br /><small class="fragment" style="font-size: 16px"><em>Bisous !</em></small></p>
+				</section>
+				</section>
+				<section>
+					<h1><small>A retenir</small></h1>
+					<small>
+						<ul>
+							<li>2 répertoires de travail</li>
+							<li>Définition du schéma relativement simple</li>
+							<li>Pas énormement de code (cas d'utilisation simple)</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1>Demo !</h1>
+					<h2>Demo !</h2>
+					<h3>Demo !</h3>
+					<h4>Demo !</h4>
+				</section>
+				<section>
+					<h1><small>Ressources</small></h1>
+					<small>
+						<ul>
+							<li>GraphQL : <a href="https://graphql.org/learn/" target="_blank">https://graphql.org/learn/</a></li>
+							<li>overblog/GraphQLBundle : <a href="https://github.com/overblog/GraphQLBundle" target="_blank">https://github.com/overblog/GraphQLBundle</a></li>
+							<li>webonyx/graphql-php : <a href="https://github.com/webonyx/graphql-php" target="_blank">https://github.com/webonyx/graphql-php</a></li>
+							<li>Dépôt du projet de démo : <a href="https://github.com/c4ilus/symfony-graph" target="_blank">https://github.com/c4ilus/symfony-graph</a></li>
+							<li>Live démo de Graphiql : <a href="https://graphql.github.io/swapi-graphql/" target="_blank">https://graphql.github.io/swapi-graphql/</a></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h1>Merci !</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
