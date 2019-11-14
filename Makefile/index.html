@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Makefile | Apéro PHP Toulouse</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Automatisation</h2>
+					<h3>utilisation d'un Makefile sur un projet PHP</h3>
+					<table>
+						<tr>
+							<td><img src="img/afup_toulouse.png" height="150" width="150" style="border: none; box-shadow:none; background: none"/></td>
+							<td><img src="img/GNU.svg" height="150" width="150" style="border: none; box-shadow:none; background: none"/></td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h1><small>Romain Moro</small></h1>
+					<p>
+						Développeur PHP/Symfony<br />
+						<img src="img/twitter.png" alt="twitter" width="50px" height="50px" style="position: absolute; border: none; box-shadow: none; margin-left: -50px; margin-top: 5px"> @c4ilus<br />
+					</p>
+					<p>
+						<img src="img/overblog.png" alt="Overblog" width="300px" style="border: none; box-shadow: none;">
+					</p>
+				</section>
+				<section>
+					<h2>Quand ?</h2>
+					<br />
+					<small>
+						<ul>
+							<li>Création de Make : 1977 (Stuart Feldman)</li>
+							<li>Variantes BSD ou GNU</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Pourquoi ?</h2>
+					<br />
+					<small>
+						<ul>
+							<li>Orchestration de la compilation</li>
+							<li>Gestion de dépendance entre fichiers</li>
+							<li>Automatisation</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Installation</h2>
+					<br />
+					<small>
+						<ul>
+							<li>Natif sur les systèmes UNIX</li>
+							<li>Sur Windows :
+								<ul>
+									<li>Sous-système Windows pour Linux => bash</li>
+									<li>Cygwin, Cmders</li>
+								</ul>
+							</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Comment ?</h2>
+					<br />
+					<small>
+						<ol>
+							<li>Créer un fichier : Makefile, makefile, GNUMakefile</li>
+							<li>Se rendre à la racine du dossier où est présent le fichier</li>
+							<li>Utiliser la commande <strong>make</strong></li>
+						</ol>
+					</small>
+				</section>
+				<section>
+					<h2>Comment ? (en vrai)</h2><br />
+					<small>
+						<ul>
+							<li>Ecrire une cible (avec ou sans prerecquis)</li>
+							<li>Une tabulation, suivie d'une instruction pour générer la cible</li>
+						</ul>
+						<p>Possibilité de définir une cible par défaut</p>
+						<ul>
+							<li>Utilisation de .DEFAULT_GOAL</li>
+						</ul>
+					</small>
+<pre><code>cible: une_autre_cible composer composer.json
+    une_instruction
+</code></pre>
+				</section>
+				<section>
+					<h2>Attention !</h2>
+					<p><small>Nous créons des commandes FAKE</small></p>
+					<small>
+						<ul>
+							<li>Risque d'être confondu avec un dossier / fichier</li>
+							<li>Utiliser <strong>.PHONY</strong></li>
+						</ul>
+					</small>
+					<p>
+<pre><code>.PHONY cible
+
+cible: une_autre_cible composer composer.json
+    une_instruction
+</code></pre>
+					</p>
+				</section>
+				<section>
+					<h2>Les commentaires</h2>
+					<br />
+					<pre><code>cible: ## commentaire
+    instruction
+					</code></pre>
+					<br />
+					<small>
+						<ul>
+							<li>Création d'une aide</li>
+							<li>Utiliser la cible <strong>help</strong> + le commentaire particulier <strong>##@</strong></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Les variables</h2>
+					<br />
+<pre><code>PORT=8000
+
+start:
+    php bin/console server:start 0.0.0.0:$(PORT)
+</code></pre>
+					<small>
+						<ul>
+							<li><strong>=</strong> => Affectation</li>
+							<li><strong>:=</strong> => Interpréter d'autres variables</li>
+							<li><strong>?=</strong> => Si pas défini, utilisation de valeur par défaut</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Les variables</h2>
+					<br />
+					<p><small>Tester l'existance d'une variable</small></p>
+<pre><code>ifdef PORT
+	insctruction
+endif
+</code></pre>
+				</section>
+				<section>
+					<h2>Affichage</h2>
+					<br />
+					<p><small>Il est possible de ne pas afficher les retours commande</small></p>
+					<small>
+						<ul>
+							<li>@ devant la commande permet de la masquer</li>
+							<li>Utilisation de <strong>.SILENT</strong></li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Inclusion</h2>
+					<p><small>Il est également possible d'utiliser des variables définies dans un fichier <strong>.env</strong></small></p>
+<pre><code>TITI=TATA</code></pre>
+<pre><code>include .env
+
+test:
+	echo $(TITI)
+</code></pre>
+				</section>
+				<section>
+					<h1><small>RTFM !</small></h1>
+					<small>
+						<a href="https://www.gnu.org/software/make/manual/make.html">https://www.gnu.org/software/make/manual/make.html</a></li>
+					</small>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
