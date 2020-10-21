@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Git</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Introduction à l'outil de versionning Git</h3>
+					<p class="center">
+						<img src="img/git.png" alt="" style="border: none; box-shadow: none" width="300">
+					</p>
+				</section>
+				<section>
+					<h3>Versionning ?</h3>
+					<small>
+						<ul>
+							<li>Gestion de différentes version de fichiers (modificables ou non)</li>
+							<li>Employé principalement dans la programmation logicielle</li>
+							<li>Favorise le travail collaboratif</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>SVN</h3>
+					<small>
+						<ul>
+							<li>Solution historique (première version sortie en 2000)</li>
+							<li>A permis de démocratiser la pratique</li>
+							<li>Très largement dominé aujourd'hui par ...</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>... Git !</h3>
+					<small>
+						<ul>
+							<li>Première version en 2005</li>
+							<li>Inventé par Linux Torvals (créateur de Linux)</li>
+							<li>Solution dominnante aujourd'hui</li>
+							<li>Installable sur Linux, Windows et Mac</li>
+							<li>Utilisable en ligne de commandes, ou via des logiciels (exemple : TortoiseGit)</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Un peu de vocabulaireb :</h3>
+					<small>
+						<ul>
+							<li><strong>VCS</strong> : Git et SVN sont des VCS (Version Control System)</li>
+							<li><strong>Dépôt</strong> : dossier contenant le code</li>
+							<li><strong>Branches</strong> : "Lignes" contenant des morceaux de code spécifiques, qui sont ensuite fusionnées sur une ligne principale, enrichissant un logiciel.</li>
+							<li><strong>Forge logicielle</strong> : Outil (site internet) utilisant Git, permettant de créer et gérer le dépot "central" (exemples : Github, GitLab, Bitbucket)</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Avantages de Git sur SVN</h3>
+					<small>
+						<ul>
+							<li>Solution <strong>Décentralisé</strong> :
+								<ul>
+									<li>SVN => Un dépôt central, code directement versionné sur le serveur. Si le serveur tombe, le travail est perdu :(</li>
+									<li>Git => Le dépot est dupliqué sur tous les postes de travail le nécéssitant. + sécurisé. + rapide</li>
+								</ul>
+							</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Utilisation type :</h3>
+					<small>
+						<ul>
+							<li>1) Création du dépôt central contenant le code initial (dépôt pouvant au départ biensur être vide)</li>
+							<li>2) Copie du dépôt en local (sur les machines des développeurs)</li>
+							<li>3) Modification du code</li>
+							<li>4) Envoie du nouveau code sur le dépot distant pour faire évoluer le logiciel en question</li>
+							<li>5) sortie de la nouvelle version du logiciel</li>
+						</ul>
+					</small>
+					<br><br>
+					<small><em>Note : je parle ici de logiciel, mais cela peut-être un site web, une application mobile, tout type de projet informatique, ou simplement d'autres fichiers</em></small>
+				</section>
+				<section>
+					<h3>L'index Git</h3>
+					<small>
+						<p>C'est une zone d'assemblage entre le répertoire de travail, et le dépôt distant.</p>
+						<p>Il sert à valider les changements effectués en local, avant l'envoie (le commit) final sur ce dépôt distant</p>
+					</small>
+				</section>
+				<section>
+					<h3>Les commandes principales (1) :</h3>
+					<small>
+						<p>En ligne de commande (généralement <code>git < commande > < options > )</code></p>
+						<ul>
+							<li><strong>git clone <em>url_vers_le_depot</strong></em> : Permet de récupérer le code pour commancer à travailler avec</li>
+							<li><strong>git status</strong> : Permet de voir l'état du répertoire de travail local (liste les fichiers modifiés)</li>
+							<li><strong>git add fichier1 fichier2 ... </strong>ou<strong> git add .</strong> : Permet de fournir à l'index les fichiers à prendre en compte avant le commit. Le . permet de dire 'tous les fichiers contenant des modifications'</li>
+							<li><strong>git commit -m "message de la modification"</strong> : Permet d'ajouter un message au commit en question, pour décrire ce qui est fait</li>
+							<li><strong>git push</strong> : Pour finalement pousser les modifications sur le dépôt principal</li>
+							<li><strong>git fetch</strong> : Voir et télécharger UNIQUEMENT les références des modifications faites sur le dépot distant (avant un git pull)</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Les commandes principales (2) :</h3>
+					<small>
+						<ul>
+							<li><strong>git pull</strong> : télécharger des modifications distantes</li>
+							<li><strong>git log</strong> : voir l'historique des commits. Chaque commit est identifié par une chaîne de caractère, appelé un <em>hash</em></li>
+							<li><strong>git checkout hash</strong> : revenir à l'état des fichiers au commit dont le hash est passé en paramètre (pratique en vas de bétise)</li>
+							<li><strong>git checkout -b nom_de_branche</strong> : créer une nouvelle branche dont le nom est passé en paramètre</li>
+							<li><strong>git checkout nom_de_la_branche</strong> : se déplacer sur une branche voulue</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+				<h3>Les commandes principales (3) :</h3>
+					<small>
+						<ul>
+							<li><strong>git branch</strong> : voir la liste des branches</li>
+							<li><strong>git branch -D nom_branche</strong> : supprimer la branche dont le nom est passé en paramètre</li>
+							<li><strong>git commit --amend</strong> : modifier le message du dernier commit fait</li>
+							<li><strong>git merge nom_branche_vers_laquelle_on_fusionne</strong> : on va y venir</li>
+							<li><strong>git rebase nom_branche_a_fusionner</strong> : on va y venir</li>
+						</ul>
+						<p>Les branches jutement, nous allons y venir</p>
+					</small>
+				</section>
+				<section>
+					<h3>Les branches :</h3>
+					<small>
+						<ul>
+							<li>Par convention, les dépôts utilisent une branche principale appelée <strong>master</strong>. Elle correspond généralement à l'état du logiciel en production</li>
+							<li>Chaque développeur avant de travailler crée une nouvelle branche, qui sera fusionnée à la branche proincipale une fis le travail fini, testé, et fonctionnel</li>
+							<li>par convention toujours, nous distinguons 2 types de branches :
+								<ul>
+									<li><strong>feature</strong> : nouvelle fonctionnalité</li>
+									<li><strong>fix</strong> : réparation d'un bug</li>
+								</ul>
+							</li>
+							<li>1 branche = 1 developpeur = 1 tache spécifique</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>La fusion des branches</h3>
+					<small>
+						<p>Il y a 2 types de fusion : <strong>merge</strong> et <strong>rebase</strong></p>
+						<ul>
+							<li>Le merge :
+								<ul>
+									<li>1) Je me place sur la branche de ma modification</li>
+									<li>2) je fait <code>git merge nom_branche_cible</code> pour pousser mes modifs sur la branche voulue (exemple : vers master)</li>
+									<li>Un commit de fusion va être crée sur la branche cible.</li>
+								</ul>
+							</li>
+							<br><br>
+							<li>Le rebase :
+								<ul>
+									<li>1) Je me place sur la branche cible (exemple : master)</li>
+									<li>2) je fait <code>git rebase nom_branche_a_fusionner</code> pour rejouter les commits provenant la branche voulue, sur ma branche</li>
+									<li>Rebase permet de conserver un historique plus propre.</li>
+								</ul>
+							</li>
+						</ul>
+					</small>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
