@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>SEO</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>SEO</h1>
+					<small>Cours 1/3</small>
+					<h3>Fondamentaux et plugins Wordpress</h3>
+				</section>
+				<section>
+					<h2>Définition</h2>
+					<small>
+						<ul>
+							<li><strong>S</strong>earch <strong>E</strong>ngine <strong>O</strong>ptimization</li>
+							<li>Référencement Naturel</li>
+							<li>Ensemble des techniques mises en œuvre pour améliorer la position d’un site web sur les pages de résultats des moteurs de recherche (SERP)</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>SERP ?</h2>
+					<small>
+						<ul>
+							<li><strong>S</strong>earch <strong>E</strong>ngine <strong>R</strong>esult <strong>P</strong>age</li>
+							<li>Page présentant les résultats pour recherche donnée sur un moteur de recherche</li>
+						</ul>
+						<img src="img/serp.png" alt="" width="500" style="border: none">
+					</small>
+				</section>
+				<section>
+					<h2>Robots d'indexation</h2>
+					<small>
+						<ul>
+							<li>Programme informatique qui parcours TOUT le web, page par page</li>
+							<li>Lit le contenu en vue d'une possible indexation par le moteur de recherche</li>
+							<li>Analyse faite par des algorithmes, qui définissent la pertinence de la page</li>
+							<li>Plus de 200 critères utilisés</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Objectifs de la SEO</h2>
+					<small>
+						<ul>
+							<li>Meilleur place possible dans les SERP</li>
+							<li>Augmenter le traffic</li>
+							<li>Augmenter les clients potentiels, revenus</li>
+							<li>Augmenter a notoriété</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Le triangle d'or</h2>
+					<img src="img/or" alt="" width="700" style="border: none">
+				</section>
+				<section>
+					<h2>En chiffres</h2>
+					<small>
+						<ul>
+							<li>1ère position : 33% des clics</li>
+							<li>2ème position : 15,6% des clics</li>
+							<li>3ème position : 10% des clics</li>
+						</ul>
+						<p>Les 3 premiers résultats représentent donc quasiment 60% des clics sur les moteurs de recherche.</p>
+						<p><em>source : https://www.seo.fr/definition/seo-definition</em></p>
+					</small>
+				</section>
+				<section>
+					<h2>Comment ?</h2>
+					<h3>Les 3 pilliers</h3>
+					<small>
+						<ul>
+							<li><strong>Le rédactionnel</strong> (optimisation On-page)</li>
+							<li><strong>La technique</strong> (optimisation On-page)</li>
+							<li><strong>Le netlinking</strong> (optimisation Off-page</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>Le rédactionnel</h2>
+					<h6>A venir : Formation SEO 2/3 : La rédaction web</h6>
+					<small>
+						<p>!!! Penser à l'utilisateur en premier !!!</p>
+						<ul>
+							<li>Règle des 3 clics</li>
+							<li>Contenu de qualité</li>
+							<li>Nouveauté</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h2>La technique</h2>
+					<h3>Les critères les plus importants</h3>
+					<h4>Les Tags importants</h4>
+					<small>
+						<p>
+							Tag HTML : Element du code source HTML d'une page web
+						</p>
+					</small>
+				</section>
+				<section>
+					<h3>Les critères les plus importants</h3>
+					<h4>Les tags importants : &lt;title&gt; </h4>
+					<small>
+						<code>
+							&lt;title&gt;Titre de la page&lt;/title&gt;
+						</code>
+						<br /><br />
+						<ul>
+							<li>60 caractères max</li>
+							<li>Information précise et claire</li>
+							<li>Unique</li>
+							<li>Contient 1 mot clé</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Les critères les plus importants</h3>
+					<h4>Les tags impotants : meta description </h4>
+					<small>
+						<code>
+							&lt;meta name="description" content="La description"&gt;
+						</code>
+						<br /><br />
+						<ul>
+							<li>156 caractères max</li>
+							<li>Résumé contextuel du contenu de la page</li>
+							<li>Contient des phrases qui contiennent des mot clés</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Les critères les plus importants</h3>
+					<h4>Les tags impotants : Hn </h4>
+					<small>
+						<code>
+							&lt;h1&gt;Titre de la page dans le contenu&lt;/h1&gt;<br />
+							&lt;h2&gt;Sous titre important&lt;/h2&gt;<br />
+							&lt;h3&gt;Sous titre de section&lt;/h3&gt;<br />
+							&lt;h2&gt;Autre sous titre important&lt;/h2&gt;
+						</code>
+						<br /><br />
+						<ul>
+							<li>Balises sémantiques</li>
+							<li>Structure du contenu dans la page</li>
+							<li>Le H1 est unique et obligatoire</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Les critères les plus importants</h3>
+					<h4>Les tags impotants : strong et em </h4>
+					<small>
+						<code>
+							&lt;strong&gt;Texte en gras&lt;/strong&gt;<br />
+							&lt;em&gt;Texte en italique&lt;/em&gt;
+						</code>
+						<br /><br />
+						<ul>
+							<li>Mise en évidence de termes importants</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Les critères les plus importants</h3>
+					<h4>Les URLS </h4>
+					<small>
+						<ul>
+							<li>http://www.monsite.com/index.html?pageId=9 => PAS BIEN</li>
+							<li>http://www.monsite.com/comment-creer-un-bonsai => BIEN</li>
+						</ul>
+					</small>
+					<p>
+						<small>Réécriture d'URL !!!!</small>
+					</p>
+				</section>
+				<section>
+					<h2>Le netlinking</h2>
+					<h3>Les Liens</h3>
+					<small>
+						<ul>
+							<li>Internes : de page à page</li>
+							<li>Externes : de site à site</li>
+						</ul>
+					</small>
+				</section>
+				<section>
+					<h3>Les liens</h3>
+					<h4>Internes</h4>
+					<small>
+						<ul>
+							<li>Mise en place de menus
+								<ul>
+									<li>Menu haut (principal) pour les pages les plus importantes</li>
+									<li>Menu bas (secondaire) pour les pages moins importantes comme les mentions légales ou la page de contact.
+										<br><br></li>
+								</ul>
+							</li>
+							<li>Ajouter dans le contenu des liens vers d'autres pages, mais avec parcimonie</li>
+							<li>Utiliser un fil d'ariane : Liens en haut de page permettant de se repérer dans la structure du site. <br>Exemple
+								 : Accueil > Prestations > Atelier Kokedama</li>
+						</ul>
+						<p><em>L'objectif est de mettre en place un "maillage", permettant aux utilisateurs de naviguer plus facilement, aux robots de comprendre plus facilement les relations entre pages.</em></p>
+					</small>
+				</section>
+				<section>
+					<h3>Les liens</h3>
+					<h4>Externes</h4>
+					<small>
+						<p>Il ne faut pas non plus en abuser (il y a quelques années, le but était d'inscrire le site sur un maximum d'annuaires pour amener le plus de traffic possible). Cette pratique est désormais inutile. La qualité passe avant la quantité. Il faut privilégier des liens provenants de sites importants, ayant bonne réputation => Notion de Page Rank.</p>
+						<p><em>Page Rank : Algorithme utilisé par les moteurs de recherche qui permettent de mesurer la popularité d’un site ou d’une page web.</em></p>
+					</small>
+				</section>
+				<section>
+					<h3>Les liens</h3>
+					<h4>Externes</h4>
+					<small>
+						<p>Des sites très populaires comme les réseaux sociaux (NON, JE NE DIRAIS PAS LE NOM !!!!) bénéficient d'un PR très important.</p>
+						<p>Il est donc judicieux dans le cadre d'une activité, de proposer une page, un compte sur les réseaux en question,
+						pour non seulement multiplier les canneaux de communication et faire connaitre son activité, mais également pour promouvoir son site web,
+						via des liens depuis la page en question.
+						</p>
+						<p>Un Site dont des liens proviennent d'une page bénéficiant d'un haut PR, pourra ainsi avoir un "bénéfice de confiance" de la part des moteurs de recherche,
+						ce facteur pouvant petre important pour une bonne SEO.</p>
+					</small>
+				</section>
+				<section>
+					<h2>Autre critère important ...</h2>
+					<h3>... La performance !</h3>
+				</section>
+				<section>
+					<h3>La performance</h3>
+					<small>
+						<p>Un site agréable d'utilisation et donc bien référençable, est un site rapide.</p>
+						<p>Le chargement d'une page ne doit pas dépasser 1 seconde. Au dela de ce delai, Google considère que la performance est mauvaise, si le temps est vraiment
+						trop haut, le référencement sera pénalisé !</p>
+						<p>L'objectif est donc de réduire le poid d'une page web via quelques pratiques :</p>
+						<ul>
+							<li>Optimisation des images</li>
+							<li>optimisation des fichiers JavaScripts ou CSS chargés</li>
+							<li>Activer le cache</li>
+						</ul>
+						<p>Tous ces points seront réaprofondits ensemble lors de l'optimisation de vos sites.</p>
+					</small>
+				</section>
+				<section>
+					<h2>Encore un critère important ...</h2>
+					<h3>... Le responsive-design !</h3>
+				</section>
+				<section>
+					<h3>Le responsive-design !</h3>
+					<small>
+						<p>Un site doit être consultable sur les supports les plus utilisés (Ordinateur, Mobile, Tablette) de manière optimale</p>
+						<p>Nous allons pour ceci mettre en place un design dit <strong>responsive</strong>, qui s'adapte automatiquement à un écran donné</p>
+						<p>Sur Wordpress, la grande majorité des thèmes proposés sont par défaut responsives, nous n'auront donc (à priori, il faudra tout de même bien tester, et ajuster si necessaire) pas de soucis sur ce point là.</p>
+						<p><em>Culture générale : Les thèmes en question utilisent une Bibliothèque (ici ensemble de morceaux de code permettant aux développeurs de gagner du temps) CSS/JavaScript appelée Bootstrap, qui a été conçue pour cet usage.</em></p>
+					</small>
+				</section>
+				<section>
+					<h2>Et dans Wordpress alors ?</h2>
+					<h3>Komenkonfé ?</h3>
+				</section>
+				<section>
+					<h3>Wordpress</h3>
+					<h4>Modules à utiliser :</h4>
+					<small>
+						<ul>
+							<li><strong>Yoast SEO</strong>
+								<ul>
+									<li>Gestion complète des balises méta</li>
+									<li>Gestion du sitemap (plan du site)</li>
+									<li>Optimisation des balises spécifiques pour les réseaux sociaux (on y reviendra)</li>
+								</ul>
+								<br>
+							</li>
+							<li><strong>Broken Link Checker</strong> : Vérifier la présence pénalisable de liens vers des pages inexistantes.
+								<br><br></li>
+							<li><strong>W3 Total Cache</strong> : Activer le cache et optiiser le temps de chargement des pages.</li>
+						</ul>
+					</small>
+				</section>
+				<section>TO BE CONTINUED ....</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
